@@ -10,7 +10,7 @@
 
 body {
     background-color: rgb(236, 230, 218);
-    font-family: 'Poppins', sons-serif;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
 
@@ -25,7 +25,7 @@ body {
 .background-verde{
 
  background: var(--verde-escuro);
-
+/*classes reutilizaveis*/
 }
 .container{
 max-width: 1440px;
@@ -33,6 +33,12 @@ padding: 0 5%;
 margin: 0 auto;
 
 }
+
+section, footer{
+  padding: 2.7rem 0;
+
+}
+
 .btn-gradiente{    /*botao*/
   padding: 10px 25px;
   color: white;
@@ -110,6 +116,47 @@ display: none;
 position: relative;
 z-index: 10;
 }
+
+/*resultados*/
+.resultados {
+
+  background: #FA8607;
+}
+.resultados .container{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.resultados .resultados-text{
+  color: white;
+  font-size: 1.6rem;
+  font-weight:600;
+  width: 50%;
+
+}
+
+.resultados .resultados-numeros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.resultados .resultados-numeros p{
+  text-align: center;
+  margin: 0 30px;
+  font-size: 20px;
+}
+
+.resultados .resultados-numeros p span{
+  font-size: 30px;
+  font-weight: 600;
+
+
+}
+
+
 /* responsivo */
 @media (max-width: 960px) {
     .menu-icon {
@@ -134,21 +181,41 @@ z-index: 10;
     .ul.ativo {
         left: 0;
     }
-    main.container{
+    main .container{
       flex-direction: column;
     }
-    main.container .main-img,
-     main.container .main-text{
+    main .container .main-img,
+     main .container .main-text{
       width: 100%;
       text-align: center;
     }
       main.container .main-text h1{
       font-size: 4rem;
     }
-    main.container .main-text div{
+    main .container .main-text div{
       justify-content: center;
     }
+.resultados .container{
+  flex-direction: column;
 
+}
+.resultados .resultados-text,
+.resultados .resultados-numero{
+  width: 100%;
+  text-align: center;
+}
+.resultados-numero{
+  margin-top: 30px;
+
+}
+}
+@media (max-width:440px){
+  .resultados .resultados-numero{
+    flex direction:column  ;
+  }
+main .container .main-text h1{
+  font-size: 3rem;
+}
 }
 
 
